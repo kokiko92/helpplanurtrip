@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HelpPlanUrTrip</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    <h1>HelpPlanUrTrip</h1>
+    <p>Personalized itineraries and planning advices</p>
+    <div class="header-buttons">
+      <button class="head_btn" onclick="location.href = 'blog.html';">Blog</button>
+      <button class="head_btn" onclick="location.href = 'faq.html';">FAQ</button>
+  </div>
+  <div class="pdp"> 
+    <img src="pdp.png" alt="pdp" onclick="location.href = 'accueil.html';">
+  </div>
+  </header>
+
+  <main>
+    <!-- Section À propos -->
+    <section class="about">
+      <h2>Who am I?</h2>
+      <div class="text-content">
+        <p>
+          My name is Audrey, and I'm from Alsace, in France. I've only got two passions in life:
+        </p>
+        <ul class="passions-list">
+          <li>🌍 Traveling</li>
+          <li>👩‍👧‍👦 My two amazing children</li>
+        </ul>
+    
+        <p>
+          Over the years, I have traveled to more than <strong>45 countries</strong> across the globe and I now  wish to share my knowledge with you.
+        </p>
+        <p>
+          I’ve travelled more with a backpack than a suitcase, but don’t worry – I know how to balance !
+        </p>
+        <p>
+          Whether you're looking for an adventurous escape or a relaxing holiday, I'm have the experience to help you plan the perfect trip. <br>
+          <a href="#ancrage" class="cta-link">Contact me here</a> and let's start planning your dream journey!
+        </p>
+        <p>
+          If you wish to know more about my trips, check out <a href="blog.html" class="cta-link" title="Visit my personal blog">my personal blog</a>
+        </p>
+      </div>
+    </section>
+    
+
+    <!-- Carte interactive -->
+    <section class="map-section">
+      <h2>Countries visited</h2>
+      <div id="map"></div>
+    </section>
+
+    <!-- Formulaire de contact -->
+    <section class="contact">
+      <div id="ancrage">
+        <h2>Contact me</h2>
+      </div>
+      <form action="https://formspree.io/f/xgvvqzqq" method="POST">
+        <label for="email">Your email</label>
+        <input id="email" type="email" name="email" placeholder="Your email" required>
+        
+        <label for="destination">Your next destination</label>
+        <input id="destination" name="destination" placeholder="Your next destination" required>
+    
+        <label for="travel_style">How do you like to travel</label>
+        
+        <div id="travel_style">
+          <label>
+            <input type="radio" name="travel_style" value="Roots/Lowcost" required>
+            Roots/Lowcost
+          </label>
+
+          <label>
+            <input type="radio" name="travel_style" value="Chill">
+            Chill
+          </label>
+          <label>
+            <input type="radio" name="travel_style"  value="Both">
+            Both
+          </label>
+        </div>
+
+        <label for="destination">Message (optional)</label>
+        <input id="destination" name="destination" placeholder="Your message">
+        
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 HelpPlanUrTrip - All right reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
