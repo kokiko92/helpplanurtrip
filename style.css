@@ -275,6 +275,24 @@ footer {
   color: #333;
 }
 
+/* Pour les écrans de petite largeur (smartphones, iPhones) */
+@media (max-width: 768px) {
+  header img {
+    max-width: 150px;
+    height: auto; /* Conserver les proportions */
+    display: block;
+    margin: 0 auto;
+  }
+
+  .section2 img {
+    max-width: 95%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
 .faq .question p {
   font-size: 1em;
   color: #555;
