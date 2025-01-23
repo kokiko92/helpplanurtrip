@@ -91,37 +91,48 @@ function ajusterContenu() {
   const imagesHeader = document.querySelector("header img");
   const imagesBlog = document.querySelectorAll(".section2 img");
 
+  // Ajustements pour tous les écrans
+  if (imagesHeader) {
+    imagesHeader.style.display = "block"; // Forcer un affichage correct
+    imagesHeader.style.margin = "0 auto"; // Centrer l'image
+  }
+
+  imagesBlog.forEach((img) => {
+    img.style.display = "block"; // Forcer l'image à occuper sa propre ligne
+    img.style.margin = "0 auto"; // Centrer chaque image
+  });
+
   if (largeurEcran > 1024) {
-    // Styles pour les grands écrans
-    titrePrincipal.style.fontSize = "2.8em"; // Légèrement réduire le titre
+    // Grands écrans
+    titrePrincipal.style.fontSize = "2.8em";
     if (imagesHeader) {
-      imagesHeader.style.maxWidth = "280px"; // Réduction légère de l'image du header
-      imagesHeader.style.height = "auto"; // Conserver les proportions
+      imagesHeader.style.maxWidth = "280px";
+      imagesHeader.style.height = "auto";
     }
     imagesBlog.forEach((img) => {
-      img.style.maxWidth = "600px"; // Taille standard pour les images de blog
+      img.style.maxWidth = "600px";
       img.style.height = "auto";
     });
   } else if (largeurEcran < 768) {
-    // Styles pour les petits écrans
-    titrePrincipal.style.fontSize = "2em"; // Réduire le titre pour les petits écrans
+    // Petits écrans (iPhone, etc.)
+    titrePrincipal.style.fontSize = "2em";
     if (imagesHeader) {
-      imagesHeader.style.maxWidth = "180px"; // Réduction légère pour mobile
+      imagesHeader.style.maxWidth = "150px"; // Réduire davantage sur iPhone
       imagesHeader.style.height = "auto";
     }
     imagesBlog.forEach((img) => {
-      img.style.maxWidth = "100%"; // Images remplissent toute la largeur disponible
+      img.style.maxWidth = "95%"; // Laisser chaque image occuper presque toute la largeur disponible
       img.style.height = "auto";
     });
   } else {
-    // Styles intermédiaires
-    titrePrincipal.style.fontSize = "2.4em"; // Taille intermédiaire pour le titre
+    // Écrans intermédiaires
+    titrePrincipal.style.fontSize = "2.4em";
     if (imagesHeader) {
-      imagesHeader.style.maxWidth = "240px"; // Réduction intermédiaire pour l'image du header
+      imagesHeader.style.maxWidth = "240px";
       imagesHeader.style.height = "auto";
     }
     imagesBlog.forEach((img) => {
-      img.style.maxWidth = "90%"; // Taille intermédiaire pour les images de blog
+      img.style.maxWidth = "90%";
       img.style.height = "auto";
     });
   }
@@ -130,4 +141,5 @@ function ajusterContenu() {
 // Appeler la fonction au chargement et lors des redimensionnements
 ajusterContenu();
 window.addEventListener("resize", ajusterContenu);
+
 
