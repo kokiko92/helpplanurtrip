@@ -82,3 +82,52 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+//Ajuster contenu
+function ajusterContenu() {
+  const largeurEcran = window.innerWidth;
+
+  // Récupérer les éléments du header et du blog
+  const titrePrincipal = document.querySelector("header h1");
+  const imagesHeader = document.querySelector("header img");
+  const imagesBlog = document.querySelectorAll(".section2 img");
+
+  if (largeurEcran > 1024) {
+    // Styles pour les grands écrans
+    titrePrincipal.style.fontSize = "2.8em"; // Légèrement réduire le titre
+    if (imagesHeader) {
+      imagesHeader.style.maxWidth = "280px"; // Réduction légère de l'image du header
+      imagesHeader.style.height = "auto"; // Conserver les proportions
+    }
+    imagesBlog.forEach((img) => {
+      img.style.maxWidth = "600px"; // Taille standard pour les images de blog
+      img.style.height = "auto";
+    });
+  } else if (largeurEcran < 768) {
+    // Styles pour les petits écrans
+    titrePrincipal.style.fontSize = "2em"; // Réduire le titre pour les petits écrans
+    if (imagesHeader) {
+      imagesHeader.style.maxWidth = "180px"; // Réduction légère pour mobile
+      imagesHeader.style.height = "auto";
+    }
+    imagesBlog.forEach((img) => {
+      img.style.maxWidth = "100%"; // Images remplissent toute la largeur disponible
+      img.style.height = "auto";
+    });
+  } else {
+    // Styles intermédiaires
+    titrePrincipal.style.fontSize = "2.4em"; // Taille intermédiaire pour le titre
+    if (imagesHeader) {
+      imagesHeader.style.maxWidth = "240px"; // Réduction intermédiaire pour l'image du header
+      imagesHeader.style.height = "auto";
+    }
+    imagesBlog.forEach((img) => {
+      img.style.maxWidth = "90%"; // Taille intermédiaire pour les images de blog
+      img.style.height = "auto";
+    });
+  }
+}
+
+// Appeler la fonction au chargement et lors des redimensionnements
+ajusterContenu();
+window.addEventListener("resize", ajusterContenu);
+
