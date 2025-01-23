@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -8,11 +9,11 @@ body {
 }
 
 header {
+  position: relative; /* Allows absolute positioning for child elements */
   text-align: center;
-  padding: 12px;
+  padding: 12px 40px; /* Add padding to ensure the content stays spaced */
   background: #4caf50;
   color: #fff;
-  position : relative;
 }
 
 header h1 {
@@ -20,12 +21,45 @@ header h1 {
   font-size: 2.5em;
 }
 
+
+
 header p {
   font-size: 1.2em;
 }
 
+header .header-buttons {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
 
-/* Section générale */
+header .head_btn {
+  padding: 10px 15px;
+  background-color: transparent;
+  color: #006400;
+  border: 2px solid #006400;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+header .head_btn:hover {
+  background-color: #006400;
+  color: white;
+}
+
+.pdp {
+  display: flex;
+  position: absolute;
+  top: -10px;
+  left: 20%;
+  height: 110%;
+  cursor: pointer;
+}
+
+/* Main Content */
 main {
   max-width: 1000px;
   margin: 0 auto;
@@ -48,21 +82,16 @@ p {
 
 /* About Section */
 .about {
-  padding-top: 10px;
-  padding-left: 40px;
-  padding-bottom: 40px;
-  padding-right: 40px;
+  padding: 20px 40px;
   background-color: #f7f7f7;
   border-radius: 10px;
   margin: 20px auto;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  text-align: left;
 }
 
 .about h2 {
   font-size: 2em;
   color: #4caf50;
-  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -99,8 +128,7 @@ p {
   color: #388e3c;
 }
 
-
-/* Carte interactive */
+/* Map Section */
 #map {
   height: 500px;
   border: 2px solid #ddd;
@@ -109,20 +137,13 @@ p {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
-/* Formulaire de contact */
+/* Contact Section */
 .contact {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  padding-top: 10px;
-  padding-left: 40px;
-  padding-bottom: 40px;
-  padding-right: 40px;
+  padding: 20px 40px;
   border-radius: 10px;
   background-color: #f7f7f7;
 }
-
-
-
 
 form {
   display: flex;
@@ -141,11 +162,6 @@ form textarea {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1em;
-}
-#travel_style {
-  margin-bottom: 20px;
-  
-  
 }
 
 form textarea {
@@ -175,126 +191,114 @@ footer {
   font-size: 0.9em;
 }
 
-/* Blog */
+/* Blog Section */
 .container {
   width: 80%;
   margin: 0 auto;
 }
+
 .container h2 {
   font-size: 2em;
   color: #4caf50;
-  margin-bottom: 20px;
   text-align: center;
 }
+
 .section2 {
   display: flex;
   margin-bottom: 40px;
 }
+
 .section2 img {
   width: 50%;
   height: auto;
   object-fit: cover;
 }
+
 .article {
   width: 50%;
   padding-left: 20px;
 }
+
 .about h3 {
   font-size: 1.7em;
   color: #000000;
-  margin-bottom: 20px;
   text-align: center;
 }
-#travel_style label {
-  margin-right: 20px;
-  font-size: 1rem;
-  color: #333;
-  font-weight: normal; /* Ensures the font weight is normal */
+
+/* Responsive Styles */
+img, iframe {
+  max-width: 100%;
+  height: auto;
 }
 
-#travel_style input[type="radio"] {
-  margin-right: 5px;
-}
+@media only screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
 
-/* Bouton head */
+  .header-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
 
-.header-buttons {
-  display: flex;
-  gap: 10px; /* Espacement entre les boutons */
-  position: absolute;
-  top: 10px;
-  right: 10px; /* Positionner les boutons en haut à droite */
-}
+  .about {
+    padding: 20px;
+    text-align: center;
+  }
 
-.head_btn {
-  padding: 10px 15px;
-  background-color: transparent; /* Fond transparent */
-  color: #006400; /* Texte en vert foncé */
-  border: 2px solid #006400; /* Contour vert foncé */
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Ajout de la transition pour la transformation */
-}
+  .about h2 {
+    font-size: 1.5em;
+  }
 
-.head_btn:hover {
-  background-color: #006400; /* Fond vert foncé au survol */
-  color: white; /* Texte en blanc au survol */
-}
-.pdp {
-  display: flex;
-  position: absolute;
-  top: -10px;
-  left: 20%;
-  height: 110%;
-  cursor: pointer;
-}
+  #map {
+    height: 300px;
+  }
 
-/* FAQ */
-.faq {
-  padding: 20px;
-  background-color: #f7f7f7;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  max-width: 800px;
-}
-
-.faq h2 {
-  text-align: center;
-  color: #4caf50;
-  margin-bottom: 20px;
-}
-
-.faq .question {
-  margin-bottom: 20px;
-}
-
-.faq .question h3 {
-  font-size: 1.4em;
-  color: #333;
-}
-
-/* Pour les écrans de petite largeur (smartphones, iPhones) */
-@media (max-width: 768px) {
-  header img {
-    max-width: 150px;
-    height: auto; /* Conserver les proportions */
-    display: block;
-    margin: 0 auto;
+  .section2 {
+    flex-direction: column;
   }
 
   .section2 img {
-    max-width: 95%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .article {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  footer {
+    font-size: 0.8em;
+    padding: 10px;
   }
 }
 
+@media only screen and (max-width: 480px) {
+  header {
+    padding: 10px;
+  }
 
-.faq .question p {
-  font-size: 1em;
-  color: #555;
-  line-height: 1.5;
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  .header-buttons {
+    gap: 3px;
+  }
+
+  .contact {
+    padding: 10px;
+  }
+
+  form input,
+  form textarea,
+  form button {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+
+  footer {
+    font-size: 0.7em;
+  }
 }
