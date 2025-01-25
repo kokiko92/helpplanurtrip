@@ -68,12 +68,11 @@ header .head_btn:hover {
 
 @media only screen and (max-width: 550px) {
   .pdp {
-    top: 10px;
-    left: 0;
+    top: -15px ;
+    left: -5px;
     height: 80%;
   }
 }
-
 /* Main Content */
 main {
   max-width: 1000px;
@@ -103,15 +102,21 @@ p {
 }
 
 .section2 img {
-  flex: 1 1 50%;
+  display: block; 
+  margin: 0px auto; 
+  max-width: 600px; 
   height: auto;
-  object-fit: cover;
   border-radius: 5px;
 }
-
+.container h2 {
+  text-align: center;
+}
 .article {
   flex: 1 1 50%;
   padding-left: 20px;
+}
+.article h3 {
+  font-size: 1.6em;
 }
 
 /* About Section */
@@ -232,7 +237,7 @@ iframe {
   height: auto;
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1000px) {
   header h1 {
     font-size: 2em;
   }
