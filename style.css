@@ -80,6 +80,26 @@ header .head_btn:hover {
     height: 70%;
   }
 }
+@media only screen and (max-width: 425px) {
+  .big-title {
+    margin-left: 30%;
+  }
+  .pdp {
+    top: -25px ;
+    left: -20px;
+    height: 90%;
+  }
+  .header {
+    position: relative;
+  }
+
+  header .head_btn {
+    position: absolute;
+    bottom: 1rem; /* Move to the bottom */
+    right: 1rem; /* Keep aligned to the right */
+  }
+}
+
 /* Main Content */
 main {
   max-width: 1000px;
