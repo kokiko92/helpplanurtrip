@@ -85,18 +85,30 @@ header .head_btn:hover {
     margin-left: 30%;
   }
   .pdp {
-    top: -25px ;
+    top: -30px ;
     left: -20px;
-    height: 90%;
+    height: 80%;
   }
   .header {
     position: relative;
   }
+  header .header-buttons {
+      position: relative;
+      display: block;
+}
+}
 
-  header .head_btn {
-    position: absolute;
-    bottom: 1rem; /* Move to the bottom */
-    right: 1rem; /* Keep aligned to the right */
+@media only screen and (max-width: 350px) {
+  .pdp {
+    top: -30px ;
+    left: -35px;
+    height: 70%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .big-title {
+    font-size: 1.9rem;
+    margin-left: 45%;
   }
 }
 
