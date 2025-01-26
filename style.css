@@ -101,13 +101,16 @@ header .head_btn:hover {
 
 @media only screen and (max-width: 375px) {
   .pdp {
-    top: -30px ;
-    left: -30px;
+    top: -20px ;
+    left: -20px;
     height: 60%;
   }
   .big-title {
     font-size: 1.9rem;
     margin-left: 20%;
+  }
+  header p { 
+    margin-top: 15px;
   }
 }
 
