@@ -103,14 +103,15 @@ header .head_btn:hover {
   .pdp {
     top: -20px ;
     left: -20px;
-    height: 60%;
+    height: 55%;
   }
   .big-title {
-    font-size: 1.9rem;
+    font-size: 2.1rem;
     margin-left: 20%;
   }
   header p { 
-    margin-top: 25px;
+    margin-top: 30px;
+    padding:10px;
   }
 }
 
