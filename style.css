@@ -95,6 +95,7 @@ header .head_btn:hover {
   header .header-buttons {
       position: relative;
       display: block;
+      margin-bottom: 20px;
 }
 }
 
