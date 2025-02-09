@@ -82,6 +82,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
-//Ajuster contenu
-
