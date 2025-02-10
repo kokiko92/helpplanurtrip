@@ -81,4 +81,12 @@ document.addEventListener("DOMContentLoaded", () => {
       target.scrollIntoView({ behavior: 'smooth' });
     });
   }
+  const ctaLink = document.querySelector('.cta-button');
+  if (ctaLink) {
+    ctaLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector('#ancrage');
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
 });
