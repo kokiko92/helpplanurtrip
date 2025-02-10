@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   // Smooth scroll for the "contact me" link
-  const ctaLink = document.querySelector('.cta-link', '.cta-button');
+  const ctaLink = document.querySelector('.cta-link');
   if (ctaLink) {
     ctaLink.addEventListener('click', function (e) {
       e.preventDefault();
