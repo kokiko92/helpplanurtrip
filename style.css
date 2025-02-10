@@ -327,3 +327,47 @@ iframe {
     padding: 10px;
   }
 }
+
+.cta-section {
+  text-align: center;
+  padding: 40px;
+  background-color: #f0f8f0; /* Vert clair pour rappeler ton thème */
+  border-radius: 10px;
+}
+
+.cta-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cta-section p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #4CAF50; /* Vert pour inciter à cliquer */
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.cta-button:hover {
+  background-color: #45a049; /* Effet au survol */
+}
+
+@media (max-width: 600px) {
+  .cta-button {
+      font-size: 16px;
+      padding: 10px 20px;
+  }
+}
+@media (max-width: 350px) {
+  .cta-button {
+      font-size: 12px;
+      padding: 2x 5px;
+  }
+}
