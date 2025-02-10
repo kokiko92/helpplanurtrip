@@ -87,6 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       const target = document.querySelector('#ancrage');
       target.scrollIntoView({ behavior: 'smooth' });
-    });
+    }); 
   }
 });
