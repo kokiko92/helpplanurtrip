@@ -155,19 +155,27 @@ p {
 }
 
 /* Section2 */
+.box {
+  display: flex;
+  flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+  gap: 10px; /* Ajoute exactement 10px d'espace entre chaque boîte */
+  width: 100%; /* Empêche les débordements */
+}
+
 .section2 {
-  display: inline-block;
-  gap: 20px;
-  padding: 10px 15px;
+  flex: 1; /* Chaque boîte prendra une portion égale de l’espace disponible */
+  max-width: 400px; 
+  text-align: center;
+  padding: 15px;
   background-color: transparent;
   color: #4caf50;
   border: 2px solid #4caf50;
   cursor: pointer;
   font-size: 16px;
   border-radius: 5px;
-  margin-bottom: 20px;
-  
 }
+
+
 .section2 a {
   color: #4caf50
 }
@@ -193,6 +201,7 @@ p {
 .container h2 {
   text-align: center;
 }
+
 .article {
   flex: 1 1 50%;
   padding-left: 20px;
@@ -332,11 +341,6 @@ iframe {
     flex-direction: column;
     gap: 5px;
   }
-
-  .section2 {
-    flex-direction: column;
-  }
-
   .section2 img {
     width: 100%;
     margin-bottom: 20px;
