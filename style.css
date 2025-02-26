@@ -7,7 +7,9 @@ body {
   color: #333;
   line-height: 1.6;
 }
-
+a:-webkit-any-link {
+  color:white;
+  }
 header {
   position: relative;
   text-align: center;
