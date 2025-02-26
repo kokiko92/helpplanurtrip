@@ -8,7 +8,7 @@ body {
   line-height: 1.6;
 }
 a:-webkit-any-link {
-  color:white;
+  color:#4caf50;
   }
 header {
   position: relative;
