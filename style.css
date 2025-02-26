@@ -179,17 +179,19 @@ p {
 .section2 a {
   color: #4caf50
 }
+.img-text {
+  color: inherit;
+}
 .section2:hover {
   background-color: #4caf50;
   color: white;
-  .cta-link {
-    color:#333
-  }
-  .img-text {
-    color: #333
-  }
 }
-
+.section2:hover .img-text {
+  color: #333 !important;
+}
+ .section2:hover .cta-link {
+    color:#333;
+  }
 .section2 img {
   display: block; 
   margin: 0px auto; 
