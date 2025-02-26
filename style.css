@@ -182,10 +182,7 @@ p {
 .section2:hover {
   background-color: #4caf50;
   color: white;
-  .cta-link {
-    color:#333
-  }
-  figcaption {
+  a {
     color: #333
   }
 }
