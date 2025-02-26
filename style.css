@@ -175,16 +175,9 @@ p {
   border-radius: 5px;
 }
 
-
-.section2 a {
-  color: #4caf50
-}
 .section2:hover {
   background-color: #4caf50;
   color: white;
-  a {
-    color: #333
-  }
 }
 
 .section2 img {
