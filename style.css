@@ -7,9 +7,7 @@ body {
   color: #333;
   line-height: 1.6;
 }
-a:-webkit-any-link {
-  color:#4caf50;
-  }
+
 header {
   position: relative;
   text-align: center;
@@ -177,14 +175,18 @@ p {
   border-radius: 5px;
 }
 
+
+.section2 a {
+  color: #4caf50
+}
 .section2:hover {
   background-color: #4caf50;
   color: white;
-   .cta-link {
-    color: #333
+  .cta-link {
+    color:#333
   }
-  a:-webkit-any-link {
-  color:#333;
+  .img-text {
+    color: #333
   }
 }
 
