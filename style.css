@@ -202,9 +202,9 @@ p {
 
 @media (max-width: 510px) {
   .section2 {
-    height:300px;
+    height:315px;
     line-height: 1.2;
-    min-width: 366px;
+    max-width: 320px;
     gap:0;
     margin-bottom: 5px;
   }
