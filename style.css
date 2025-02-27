@@ -197,7 +197,7 @@ p {
   max-width: 200px; 
   height: auto;
   border-radius: 5px;
-  margin-buttom:5px;
+  margin-bottom:5px;
 }
 
 @media (max-width: 510px) {
