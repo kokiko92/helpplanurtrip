@@ -197,6 +197,7 @@ p {
   max-width: 200px; 
   height: auto;
   border-radius: 5px;
+  margin-buttom:5px;
 }
 
 @media (max-width: 510px) {
@@ -209,9 +210,6 @@ p {
   }
 }
 
-
-
-
 .container h2 {
   text-align: center;
 }
@@ -223,7 +221,8 @@ p {
 .section2 h3 {
   font-size: 1.6em;
   text-align: center;
-  text-decoration-line: underline
+  text-decoration-line: underline;
+  margin-bottom: 5px;
 }
 
 /* About Section */
