@@ -408,21 +408,6 @@ iframe {
       padding: 2x 5px;
   }
 }
-
-.social-links {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.social-links a {
-    font-size: 24px;
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
 .social-links a:hover {
     color: #007bff;
 }
