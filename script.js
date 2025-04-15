@@ -27,19 +27,20 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   // Charger les frontières des pays depuis un GeoJSON public
-  fetch("https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson")
+  fetch("https://corsproxy.io/?https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson")
+
     .then(response => response.json())
     .then(data => {
       L.geoJSON(data, {
         style: feature => ({
           color: "#666", // Contour des pays
           weight: 1,
-          fillColor: visitedCountries.includes(feature.properties.ISO_A3_EH) ? "#4caf50" : "#ddd",
+          fillColor: visitedCountries.includes(feature.properties.ISO_A3) ? "#4caf50" : "#ddd",
           fillOpacity: 0.7
         }),
         onEachFeature: (feature, layer) => {
-          const countryName = feature.properties.NAME;
-          const visited = visitedCountries.includes(feature.properties.ISO_A3_EH);
+          const countryName = feature.properties.ADMIN;
+          const visited = visitedCountries.includes(feature.properties.ISO_A3);
 
           // Ajouter une infobulle
           layer.bindPopup(
