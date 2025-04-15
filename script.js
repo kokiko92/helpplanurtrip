@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   // Charger les frontières des pays depuis un GeoJSON public
-  fetch("https://corsproxy.io/?https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson")
+  fetch("https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson")
 
     .then(response => response.json())
     .then(data => {
