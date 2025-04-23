@@ -30,12 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
         style: feature => ({
           color: "#666", // Contour des pays
           weight: 1,
-          fillColor: visitedCountries.includes(feature.properties.ISO_A3) ? "#4caf50" : "#ddd",
+          fillColor: visitedCountries.includes(feature.properties["ISO3166-1-Alpha-3"]) ? "#4caf50" : "#ddd",
           fillOpacity: 0.7
         }),
         onEachFeature: (feature, layer) => {
-          const countryName = feature.properties.ADMIN || feature.properties.NAME || "Nom inconnu";
-          const visited = visitedCountries.includes(feature.properties.ISO_A3);
+          const countryName = feature.properties.name || "Nom inconnu"; // Utilisez la propriété 'name'
+          const visited = visitedCountries.includes(feature.properties["ISO3166-1-Alpha-3"]);
 
           // Ajouter une infobulle
           layer.bindPopup(
