@@ -31,19 +31,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     .then(response => response.json())
     .then(data => {
-      L.geoJSON(data, {
-        style: function(feature) {
-          const code = feature.properties.ISO_A3;
-          const isVisited = visitedCountries.includes(code);
-  
-  // TEMPORAIRE : mettre les pays visités en rouge vif
+    L.geoJSON(data, {
+      style: function(feature) {
+        const code = feature.properties.ISO_A3;
+        const isVisited = visitedCountries.includes(code);
+    
         return {
           color: "#666",
           weight: 1,
-          fillColor: isVisited ? "red" : "#ddd",  // couleur très visible pour test
+          fillColor: isVisited ? "red" : "#ddd",  // rouge vif pour debug temporaire
           fillOpacity: 0.9
         };
       },
+
 
 
           fillOpacity: 0.7
