@@ -35,7 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
         style: feature => ({
           color: "#666", // Contour des pays
           weight: 1,
-          fillColor: visitedCountries.includes(feature.properties.ISO_A3) ? "#4caf50" : "#ddd",
+          console.log(feature.properties.ISO_A3);
+          fillColor: visitedCountries.includes(feature.properties.ISO_A3) ? "#4caf50" : "#ddd"
+
           fillOpacity: 0.7
         }),
         onEachFeature: (feature, layer) => {
