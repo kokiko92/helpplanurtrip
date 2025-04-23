@@ -18,11 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }).addTo(map);
 
   // Liste des pays visités (ISO Alpha-3)
-  const visitedCountries = ["FRA"];
+  const visitedCountries = ["FRA", "ESP", "USA", "JPN", "ITA", "DEU", "DNK", "CHE", "GBR", "BEL", "PRT", "CAN", "MEX", "GTM", "BLZ", "MAR", "TGO", "BEN",
+                            "VNM", "THA", "AUS", "LKA", "IND", "CHN", "UKR", "RUS", "NPL", "MMR", "LAO", "IDN", "COL", "BOL", "PER", "HRV",
+                            "TUR", "IRN", "ZAF", "SWZ", "ROU", "GRC", "ISR", "NLD", "ISL", "NOR", "ARE"];
 
   // Charger les frontières des pays depuis un GeoJSON public
   fetch("https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson")
-
     .then(response => response.json())
     .then(data => {
       L.geoJSON(data, {
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
           fillOpacity: 0.7
         }),
         onEachFeature: (feature, layer) => {
-          const countryName = feature.properties.ADMIN;
+          const countryName = feature.properties.ADMIN || feature.properties.NAME || "Nom inconnu";
           const visited = visitedCountries.includes(feature.properties.ISO_A3);
 
           // Ajouter une infobulle
@@ -82,6 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       const target = document.querySelector('#ancrage');
       target.scrollIntoView({ behavior: 'smooth' });
-    }); 
+    });
   }
 });
