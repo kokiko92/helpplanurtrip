@@ -31,44 +31,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
     .then(response => response.json())
     .then(data => {
-   L.geoJSON(data, {
-    style: feature => ({
-      color: "#666", // Contour des pays
-      weight: 1,
-      fillColor: visitedCountries.includes(feature.properties.ISO_A3) ? "#4caf50" : "#ddd",
-      fillOpacity: 0.7
-    }),
-    onEachFeature: (feature, layer) => {
-      const countryName = feature.properties.ADMIN;
-      const visited = visitedCountries.includes(feature.properties.ISO_A3);
-  
-      // Ajouter une infobulle
-      layer.bindPopup(
-        `<strong>${countryName}</strong><br>` +
-        (visited ? `Itineraries and tips <a href="#ancrage">here</a>` : "Not visited")
-      );
-  
-      // Ajouter un effet de surbrillance au survol
-      layer.on("mouseover", function () {
-        this.setStyle({
-          fillColor: "#ffcc00",
-          fillOpacity: 0.9
-        });
-      });
-      layer.on("mouseout", function () {
-        this.setStyle({
-          fillColor: visited ? "#4caf50" : "#ddd",
+      L.geoJSON(data, {
+        style: feature => ({
+          color: "#666", // Contour des pays
+          weight: 1,
+          fillColor: visitedCountries.includes(feature.properties.ISO_A3) ? "#4caf50" : "#ddd",
           fillOpacity: 0.7
-        });
-      });
-  
-      // Ajouter un événement au clic
-      layer.on("click", () => {
-        console.log(`Vous avez cliqué sur ${countryName}`);
-      });
-    }
-  }).addTo(map);
-      
+        }),
+        onEachFeature: (feature, layer) => {
+          const countryName = feature.properties.ADMIN;
+          const visited = visitedCountries.includes(feature.properties.ISO_A3);
+
+          // Ajouter une infobulle
+          layer.bindPopup(
+            `<strong>${countryName}</strong><br>` +
+            (visited ? `Itineraries and tips <a href="#ancrage">here</a>` : "Not visited")
+          );
+
+          // Ajouter un effet de surbrillance au survol
+          layer.on("mouseover", function () {
+            this.setStyle({
+              fillColor: "#ffcc00",
+              fillOpacity: 0.9
+            });
+          });
+          layer.on("mouseout", function () {
+            this.setStyle({
+              fillColor: visited ? "#4caf50" : "#ddd",
+              fillOpacity: 0.7
+            });
+          });
+
+          // Ajouter un événement au clic
+          layer.on("click", () => {
+            console.log(`Vous avez cliqué sur ${countryName}`);
+          });
+        }
+      }).addTo(map);
+    })
     .catch(error => {
       console.error("Erreur lors du chargement des données GeoJSON :", error);
     });
