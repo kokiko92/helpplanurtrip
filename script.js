@@ -32,11 +32,19 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(response => response.json())
     .then(data => {
       L.geoJSON(data, {
-        style: feature => ({
-          color: "#666", // Contour des pays
+        style: function(feature) {
+          const code = feature.properties.ISO_A3;
+          const isVisited = visitedCountries.includes(code);
+  
+  // TEMPORAIRE : mettre les pays visités en rouge vif
+        return {
+          color: "#666",
           weight: 1,
-          console.log(feature.properties.ISO_A3);
-          fillColor: visitedCountries.includes(feature.properties.ISO_A3) ? "#4caf50" : "#ddd"
+          fillColor: isVisited ? "red" : "#ddd",  // couleur très visible pour test
+          fillOpacity: 0.9
+        };
+      },
+
 
           fillOpacity: 0.7
         }),
