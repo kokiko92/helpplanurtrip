@@ -415,6 +415,8 @@ iframe {
     color: #007bff;
 }
 
+display: inline-block;
+
 .back_btn {
   border-radius:10px;
   background-color:white;
