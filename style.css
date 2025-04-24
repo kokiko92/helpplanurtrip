@@ -415,3 +415,7 @@ iframe {
     color: #007bff;
 }
 
+.back_btn {
+  border-radius:6px;
+  background-color:white;
+}
