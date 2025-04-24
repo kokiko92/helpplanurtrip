@@ -416,6 +416,10 @@ iframe {
 }
 
 .back_btn {
-  border-radius:6px;
+  border-radius:10px;
   background-color:white;
+  display:block;
+  width:50px;
+  height:auto;
+  margin-bottom:0px;
 }
